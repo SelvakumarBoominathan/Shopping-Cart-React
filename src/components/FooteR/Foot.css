@@ -1,0 +1,7 @@
+.row-footer {
+  display: grid;
+  place-items: center;
+  min-height: 100px;
+  background-color: black;
+  color: white;
+}

@@ -1,8 +1,8 @@
-.Card_container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  grid-row-gap: 100px;
-  /* row-gap: 10px; */
-  padding-top: 100px;
+.container-Bod {
+  padding: 10px 2% 10px 2%;
+  place-items: center;
+}
+
+.container-Bod>* {
+  margin: 10px 0 10px 0;
 }
