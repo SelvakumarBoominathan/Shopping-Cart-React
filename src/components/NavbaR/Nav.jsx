@@ -35,7 +35,7 @@ const Navb = ({ count }) => {
         </Container>
         <Button className="keeper" variant="secondary">
           <img width="64" height="64" src="https://img.icons8.com/nolan/64/shopping-cart.png" alt="shopping-cart" />
-          <Badge bg="secondary"><h6>Cart {count}</h6></Badge>
+          <Badge bg="secondary"><h6>Cart {count} 0 </h6></Badge>
         </Button>
       </Navbar>
     </div >

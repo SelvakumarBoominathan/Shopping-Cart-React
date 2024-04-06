@@ -11,7 +11,7 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <Body />
+      <Body Data={Data} />
       <Footer />
 
     </>
@@ -66,6 +66,18 @@ const Data = [
   },
   {
     "id": 8,
+    "name": "Product 8",
+    "price": 89.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 9,
+    "name": "Product 7",
+    "price": 79.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 10,
     "name": "Product 8",
     "price": 89.99,
     "image": "https://via.placeholder.com/150"
