@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Nav.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,10 +6,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import Body from '../BodY/Bod.jsx';
+import body from '../BodY/Bod.jsx';
 
 
-const count = 0;
+
+
 
 const Navb = ({ count }) => {
   return (
@@ -27,6 +28,7 @@ const Navb = ({ count }) => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.2">
                   Popular Items
+                  
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">New Arrival</NavDropdown.Item>
               </NavDropdown>
@@ -35,7 +37,7 @@ const Navb = ({ count }) => {
         </Container>
         <Button className="keeper" variant="secondary">
           <img width="64" height="64" src="https://img.icons8.com/nolan/64/shopping-cart.png" alt="shopping-cart" />
-          <Badge bg="secondary"><h6>Cart {count} 0 </h6></Badge>
+          <Badge bg="secondary"><h6>Cart {count} </h6></Badge>
         </Button>
       </Navbar>
     </div >
@@ -43,3 +45,4 @@ const Navb = ({ count }) => {
 }
 
 export default Navb;
+

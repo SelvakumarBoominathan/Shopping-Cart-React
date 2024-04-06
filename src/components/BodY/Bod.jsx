@@ -9,22 +9,23 @@ import { useState } from 'react';
 
 const Bod = ({ Data }) => {
   const [cart, setCart] = useState({});
-  // const [isInCart, setIsInCart = useState(false);
-  // const [count, setCount] = useState(0);
+  const [isInCart, setIsInCart] = useState(false);
+  const [count, setCount] = useState(0);
 
   const handleClick = (id) => {
-    // if (isInCart) {
-    //   setCount(count - 1);
-    // } else {
-    //   setCount(count + 1);
-    // }
-    // setIsInCart(!isInCart);
+    if (isInCart) {
+      setCount(count - 1);
+    } else {
+      setCount(count + 1);
+    }
+    setIsInCart(!isInCart);
 
     setCart(prevCart => ({
       ...prevCart,
       [id]: !prevCart[id]
     }));
   };
+
 
 
 
@@ -41,6 +42,7 @@ const Bod = ({ Data }) => {
               <Card.Title>{item.name}</Card.Title>
               <Card.Text>
                 {item.price}
+                {/* count = {handleClick} */}
               </Card.Text>
               <Button variant="primary" onClick={() => handleClick(item.id)}>
                 {cart[item.id] ? 'Remove' : 'Add to Cart'}
@@ -57,9 +59,3 @@ const Bod = ({ Data }) => {
 
 
 export default Bod;
-
-
-
-
-
-
