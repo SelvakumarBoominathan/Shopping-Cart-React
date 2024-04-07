@@ -6,13 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import body from '../BodY/Bod.jsx';
+// import body from '../BodY/Bod.jsx';
 
 
 
 
 
-const Navb = ({ count }) => {
+const Navb = ({ counter }) => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -28,7 +28,7 @@ const Navb = ({ count }) => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.2">
                   Popular Items
-                  
+
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">New Arrival</NavDropdown.Item>
               </NavDropdown>
@@ -37,7 +37,7 @@ const Navb = ({ count }) => {
         </Container>
         <Button className="keeper" variant="secondary">
           <img width="64" height="64" src="https://img.icons8.com/nolan/64/shopping-cart.png" alt="shopping-cart" />
-          <Badge bg="secondary"><h6>Cart {count} </h6></Badge>
+          <Badge bg="secondary"><h6>Cart {counter} </h6></Badge>
         </Button>
       </Navbar>
     </div >

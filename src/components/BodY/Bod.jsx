@@ -7,27 +7,52 @@ import Row from 'react-bootstrap/Row';
 import { useState } from 'react';
 
 
-const Bod = ({ Data }) => {
+const Bod = ({ Data, incrementCounter }) => {
   const [cart, setCart] = useState({});
   const [isInCart, setIsInCart] = useState(false);
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+
+
+  // incrementCounter();
+  // const handleClick = (id) => {
+  //   if (isInCart) {
+  //     setCount(count - 1);
+  //   } else {
+  //     setCount(count + 1);
+  //   }
+  //   setIsInCart(!isInCart);
+
+  //   setCart(prevCart => ({
+  //     ...prevCart,
+  //     [id]: !prevCart[id]
+  //   }));
+  // }
+
+  // const handleClick = (id) => {
+  //   incrementCounter(); // Increment the counter when the button is clicked
+  //   setIsInCart(!isInCart);
+  //   setCart(prevCart => ({
+  //     ...prevCart,
+  //     [id]: !prevCart[id]
+  //   }));
+  // };
 
   const handleClick = (id) => {
-    if (isInCart) {
-      setCount(count - 1);
+    const newCart = { ...cart };
+    if (cart[id]) {
+      delete newCart[id];
+      incrementCounter(-1);
     } else {
-      setCount(count + 1);
+      newCart[id] = true;
+      incrementCounter(1);
     }
+    setCart(newCart);
     setIsInCart(!isInCart);
-
-    setCart(prevCart => ({
-      ...prevCart,
-      [id]: !prevCart[id]
-    }));
   };
 
 
 
+  // {() => handleClick(item.id)}
 
   return (
 

@@ -5,13 +5,29 @@ import Header from './components/HeadeR/Head.jsx';
 import Body from './components/BodY/Bod.jsx';
 import Footer from './components/FooteR/Foot.jsx';
 
+
+
+
+
+
+
+
+
+
 function App() {
+
+  const [counter, setCounter] = useState(0);
+
+  const incrementCounter = (x) => {
+    setCounter(prevCounter => prevCounter + x);
+
+  };
 
   return (
     <>
-      <Navbar />
+      <Navbar counter={counter} />
       <Header />
-      <Body Data={Data} />
+      <Body Data={Data} incrementCounter={incrementCounter} />
       <Footer />
 
     </>
